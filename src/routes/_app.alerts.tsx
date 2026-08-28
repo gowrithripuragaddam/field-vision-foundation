@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { TriangleAlert } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/alerts")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/alerts")({
       { property: "og:description", content: "Disease, pest and weather alerts for your farm." },
     ],
   }),
-  component: () => <PlaceholderPage title="Alerts" description="Disease, pest and weather alerts for your farm." icon={} />,
+  component: () => <PlaceholderPage title="Alerts" description="Disease, pest and weather alerts for your farm." icon={TriangleAlert} />,
 });

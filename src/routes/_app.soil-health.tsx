@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { Sprout } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/soil-health")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/soil-health")({
       { property: "og:description", content: "Soil nutrients, moisture and pH insights for your land." },
     ],
   }),
-  component: () => <PlaceholderPage title="Soil Health" description="Soil nutrients, moisture and pH insights for your land." icon={} />,
+  component: () => <PlaceholderPage title="Soil Health" description="Soil nutrients, moisture and pH insights for your land." icon={Sprout} />,
 });

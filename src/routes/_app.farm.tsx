@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { Tractor } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/farm")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/farm")({
       { property: "og:description", content: "Manage your plots, crops and seasons in one place." },
     ],
   }),
-  component: () => <PlaceholderPage title="My Farm" description="Manage your plots, crops and seasons in one place." icon={} />,
+  component: () => <PlaceholderPage title="My Farm" description="Manage your plots, crops and seasons in one place." icon={Tractor} />,
 });

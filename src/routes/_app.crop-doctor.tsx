@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/crop-doctor")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/crop-doctor")({
       { property: "og:description", content: "Upload a crop photo to diagnose diseases and get treatment guidance." },
     ],
   }),
-  component: () => <PlaceholderPage title="Crop Doctor" description="Upload a crop photo to diagnose diseases and get treatment guidance." icon={} />,
+  component: () => <PlaceholderPage title="Crop Doctor" description="Upload a crop photo to diagnose diseases and get treatment guidance." icon={Stethoscope} />,
 });

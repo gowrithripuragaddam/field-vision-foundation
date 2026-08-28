@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { History } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/history")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/history")({
       { property: "og:description", content: "Past scans, advisories and farm activity records." },
     ],
   }),
-  component: () => <PlaceholderPage title="History" description="Past scans, advisories and farm activity records." icon={} />,
+  component: () => <PlaceholderPage title="History" description="Past scans, advisories and farm activity records." icon={History} />,
 });

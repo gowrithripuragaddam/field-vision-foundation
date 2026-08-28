@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { Leaf } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/crop-health")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/crop-health")({
       { property: "og:description", content: "Track crop condition and growth across every field." },
     ],
   }),
-  component: () => <PlaceholderPage title="Crop Health" description="Track crop condition and growth across every field." icon={} />,
+  component: () => <PlaceholderPage title="Crop Health" description="Track crop condition and growth across every field." icon={Leaf} />,
 });

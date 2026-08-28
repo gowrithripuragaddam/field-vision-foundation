@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { Droplets } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/irrigation")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/irrigation")({
       { property: "og:description", content: "Smart watering schedules based on crop and soil needs." },
     ],
   }),
-  component: () => <PlaceholderPage title="Irrigation" description="Smart watering schedules based on crop and soil needs." icon={} />,
+  component: () => <PlaceholderPage title="Irrigation" description="Smart watering schedules based on crop and soil needs." icon={Droplets} />,
 });

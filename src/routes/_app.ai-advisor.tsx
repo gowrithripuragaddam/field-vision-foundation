@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { Bot } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/ai-advisor")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/ai-advisor")({
       { property: "og:description", content: "Ask farming questions and get grounded advisory answers." },
     ],
   }),
-  component: () => <PlaceholderPage title="AI Advisor" description="Ask farming questions and get grounded advisory answers." icon={} />,
+  component: () => <PlaceholderPage title="AI Advisor" description="Ask farming questions and get grounded advisory answers." icon={Bot} />,
 });

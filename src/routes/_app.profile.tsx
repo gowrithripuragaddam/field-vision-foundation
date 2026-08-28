@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {  } from "lucide-react";
+import { User } from "lucide-react";
 import { PlaceholderPage } from "@/components/common/PlaceholderPage";
 
 export const Route = createFileRoute("/_app/profile")({
@@ -11,5 +11,5 @@ export const Route = createFileRoute("/_app/profile")({
       { property: "og:description", content: "Your farmer profile and account preferences." },
     ],
   }),
-  component: () => <PlaceholderPage title="Profile" description="Your farmer profile and account preferences." icon={} />,
+  component: () => <PlaceholderPage title="Profile" description="Your farmer profile and account preferences." icon={User} />,
 });
