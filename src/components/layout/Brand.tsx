@@ -13,7 +13,9 @@ export function Brand({ className, onDark = false }: BrandProps) {
       <span
         className={cn(
           "flex size-9 items-center justify-center rounded-xl",
-          onDark ? "bg-sidebar-primary text-sidebar-primary-foreground" : "bg-primary text-primary-foreground",
+          onDark
+            ? "bg-sidebar-primary text-sidebar-primary-foreground"
+            : "bg-primary text-primary-foreground",
         )}
       >
         <Leaf className="size-5" aria-hidden />

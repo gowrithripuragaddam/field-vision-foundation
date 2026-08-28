@@ -21,7 +21,9 @@ export function PlaceholderPage({ title, description, icon, note }: PlaceholderP
       />
       <EmptyState
         title={`${title} is not built yet`}
-        description={note ?? "This module is part of a later milestone. The route and navigation are ready."}
+        description={
+          note ?? "This module is part of a later milestone. The route and navigation are ready."
+        }
         {...(icon ? { icon } : {})}
       />
     </div>

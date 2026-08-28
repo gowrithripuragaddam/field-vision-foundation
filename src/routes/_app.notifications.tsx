@@ -11,5 +11,11 @@ export const Route = createFileRoute("/_app/notifications")({
       { property: "og:description", content: "Your SmartAgri AI notification centre." },
     ],
   }),
-  component: () => <PlaceholderPage title="Notifications" description="Your SmartAgri AI notification centre." icon={Bell} />,
+  component: () => (
+    <PlaceholderPage
+      title="Notifications"
+      description="Your SmartAgri AI notification centre."
+      icon={Bell}
+    />
+  ),
 });

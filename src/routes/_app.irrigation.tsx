@@ -8,8 +8,17 @@ export const Route = createFileRoute("/_app/irrigation")({
       { title: "Irrigation — SmartAgri AI" },
       { name: "description", content: "Smart watering schedules based on crop and soil needs." },
       { property: "og:title", content: "Irrigation — SmartAgri AI" },
-      { property: "og:description", content: "Smart watering schedules based on crop and soil needs." },
+      {
+        property: "og:description",
+        content: "Smart watering schedules based on crop and soil needs.",
+      },
     ],
   }),
-  component: () => <PlaceholderPage title="Irrigation" description="Smart watering schedules based on crop and soil needs." icon={Droplets} />,
+  component: () => (
+    <PlaceholderPage
+      title="Irrigation"
+      description="Smart watering schedules based on crop and soil needs."
+      icon={Droplets}
+    />
+  ),
 });

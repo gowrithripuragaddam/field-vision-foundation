@@ -8,8 +8,17 @@ export const Route = createFileRoute("/_app/crop-health")({
       { title: "Crop Health — SmartAgri AI" },
       { name: "description", content: "Track crop condition and growth across every field." },
       { property: "og:title", content: "Crop Health — SmartAgri AI" },
-      { property: "og:description", content: "Track crop condition and growth across every field." },
+      {
+        property: "og:description",
+        content: "Track crop condition and growth across every field.",
+      },
     ],
   }),
-  component: () => <PlaceholderPage title="Crop Health" description="Track crop condition and growth across every field." icon={Leaf} />,
+  component: () => (
+    <PlaceholderPage
+      title="Crop Health"
+      description="Track crop condition and growth across every field."
+      icon={Leaf}
+    />
+  ),
 });

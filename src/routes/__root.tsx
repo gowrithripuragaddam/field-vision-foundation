@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -60,14 +59,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "SmartAgri AI — Crop Disease & Farm Advisory" },
       {
         name: "description",
-        content:
-          "Smart agriculture platform for crop disease detection and farm advisory.",
+        content: "Smart agriculture platform for crop disease detection and farm advisory.",
       },
       { property: "og:title", content: "SmartAgri AI" },
       {
         property: "og:description",
-        content:
-          "Smart agriculture platform for crop disease detection and farm advisory.",
+        content: "Smart agriculture platform for crop disease detection and farm advisory.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

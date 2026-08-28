@@ -11,5 +11,11 @@ export const Route = createFileRoute("/_app/farm")({
       { property: "og:description", content: "Manage your plots, crops and seasons in one place." },
     ],
   }),
-  component: () => <PlaceholderPage title="My Farm" description="Manage your plots, crops and seasons in one place." icon={Tractor} />,
+  component: () => (
+    <PlaceholderPage
+      title="My Farm"
+      description="Manage your plots, crops and seasons in one place."
+      icon={Tractor}
+    />
+  ),
 });

@@ -11,5 +11,11 @@ export const Route = createFileRoute("/_app/profile")({
       { property: "og:description", content: "Your farmer profile and account preferences." },
     ],
   }),
-  component: () => <PlaceholderPage title="Profile" description="Your farmer profile and account preferences." icon={User} />,
+  component: () => (
+    <PlaceholderPage
+      title="Profile"
+      description="Your farmer profile and account preferences."
+      icon={User}
+    />
+  ),
 });

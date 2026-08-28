@@ -8,8 +8,17 @@ export const Route = createFileRoute("/_app/soil-health")({
       { title: "Soil Health — SmartAgri AI" },
       { name: "description", content: "Soil nutrients, moisture and pH insights for your land." },
       { property: "og:title", content: "Soil Health — SmartAgri AI" },
-      { property: "og:description", content: "Soil nutrients, moisture and pH insights for your land." },
+      {
+        property: "og:description",
+        content: "Soil nutrients, moisture and pH insights for your land.",
+      },
     ],
   }),
-  component: () => <PlaceholderPage title="Soil Health" description="Soil nutrients, moisture and pH insights for your land." icon={Sprout} />,
+  component: () => (
+    <PlaceholderPage
+      title="Soil Health"
+      description="Soil nutrients, moisture and pH insights for your land."
+      icon={Sprout}
+    />
+  ),
 });

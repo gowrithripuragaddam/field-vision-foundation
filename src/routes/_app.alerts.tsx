@@ -11,5 +11,11 @@ export const Route = createFileRoute("/_app/alerts")({
       { property: "og:description", content: "Disease, pest and weather alerts for your farm." },
     ],
   }),
-  component: () => <PlaceholderPage title="Alerts" description="Disease, pest and weather alerts for your farm." icon={TriangleAlert} />,
+  component: () => (
+    <PlaceholderPage
+      title="Alerts"
+      description="Disease, pest and weather alerts for your farm."
+      icon={TriangleAlert}
+    />
+  ),
 });

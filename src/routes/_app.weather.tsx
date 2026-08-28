@@ -11,5 +11,11 @@ export const Route = createFileRoute("/_app/weather")({
       { property: "og:description", content: "Local weather and forecast-based farm advisories." },
     ],
   }),
-  component: () => <PlaceholderPage title="Weather" description="Local weather and forecast-based farm advisories." icon={CloudSun} />,
+  component: () => (
+    <PlaceholderPage
+      title="Weather"
+      description="Local weather and forecast-based farm advisories."
+      icon={CloudSun}
+    />
+  ),
 });
