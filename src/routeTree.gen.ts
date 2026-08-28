@@ -10,33 +10,228 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SplatRouteImport } from './routes/$'
+import { Route as AppRouteImport } from './routes/_app'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as AppAiAdvisorRouteImport } from './routes/_app.ai-advisor'
+import { Route as AppAlertsRouteImport } from './routes/_app.alerts'
+import { Route as AppCropDoctorRouteImport } from './routes/_app.crop-doctor'
+import { Route as AppCropHealthRouteImport } from './routes/_app.crop-health'
+import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
+import { Route as AppFarmRouteImport } from './routes/_app.farm'
+import { Route as AppHistoryRouteImport } from './routes/_app.history'
+import { Route as AppIrrigationRouteImport } from './routes/_app.irrigation'
+import { Route as AppNotificationsRouteImport } from './routes/_app.notifications'
+import { Route as AppProfileRouteImport } from './routes/_app.profile'
+import { Route as AppSoilHealthRouteImport } from './routes/_app.soil-health'
+import { Route as AppWeatherRouteImport } from './routes/_app.weather'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/_app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppAiAdvisorRoute = AppAiAdvisorRouteImport.update({
+  id: '/ai-advisor',
+  path: '/ai-advisor',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAlertsRoute = AppAlertsRouteImport.update({
+  id: '/alerts',
+  path: '/alerts',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCropDoctorRoute = AppCropDoctorRouteImport.update({
+  id: '/crop-doctor',
+  path: '/crop-doctor',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCropHealthRoute = AppCropHealthRouteImport.update({
+  id: '/crop-health',
+  path: '/crop-health',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppDashboardRoute = AppDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppFarmRoute = AppFarmRouteImport.update({
+  id: '/farm',
+  path: '/farm',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppHistoryRoute = AppHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppIrrigationRoute = AppIrrigationRouteImport.update({
+  id: '/irrigation',
+  path: '/irrigation',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppNotificationsRoute = AppNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProfileRoute = AppProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSoilHealthRoute = AppSoilHealthRouteImport.update({
+  id: '/soil-health',
+  path: '/soil-health',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppWeatherRoute = AppWeatherRouteImport.update({
+  id: '/weather',
+  path: '/weather',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/ai-advisor': typeof AppAiAdvisorRoute
+  '/alerts': typeof AppAlertsRoute
+  '/crop-doctor': typeof AppCropDoctorRoute
+  '/crop-health': typeof AppCropHealthRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/farm': typeof AppFarmRoute
+  '/history': typeof AppHistoryRoute
+  '/irrigation': typeof AppIrrigationRoute
+  '/notifications': typeof AppNotificationsRoute
+  '/profile': typeof AppProfileRoute
+  '/soil-health': typeof AppSoilHealthRoute
+  '/weather': typeof AppWeatherRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/ai-advisor': typeof AppAiAdvisorRoute
+  '/alerts': typeof AppAlertsRoute
+  '/crop-doctor': typeof AppCropDoctorRoute
+  '/crop-health': typeof AppCropHealthRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/farm': typeof AppFarmRoute
+  '/history': typeof AppHistoryRoute
+  '/irrigation': typeof AppIrrigationRoute
+  '/notifications': typeof AppNotificationsRoute
+  '/profile': typeof AppProfileRoute
+  '/soil-health': typeof AppSoilHealthRoute
+  '/weather': typeof AppWeatherRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/_app': typeof AppRouteWithChildren
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/_app/ai-advisor': typeof AppAiAdvisorRoute
+  '/_app/alerts': typeof AppAlertsRoute
+  '/_app/crop-doctor': typeof AppCropDoctorRoute
+  '/_app/crop-health': typeof AppCropHealthRoute
+  '/_app/dashboard': typeof AppDashboardRoute
+  '/_app/farm': typeof AppFarmRoute
+  '/_app/history': typeof AppHistoryRoute
+  '/_app/irrigation': typeof AppIrrigationRoute
+  '/_app/notifications': typeof AppNotificationsRoute
+  '/_app/profile': typeof AppProfileRoute
+  '/_app/soil-health': typeof AppSoilHealthRoute
+  '/_app/weather': typeof AppWeatherRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$'
+    | '/login'
+    | '/register'
+    | '/ai-advisor'
+    | '/alerts'
+    | '/crop-doctor'
+    | '/crop-health'
+    | '/dashboard'
+    | '/farm'
+    | '/history'
+    | '/irrigation'
+    | '/notifications'
+    | '/profile'
+    | '/soil-health'
+    | '/weather'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/$'
+    | '/login'
+    | '/register'
+    | '/ai-advisor'
+    | '/alerts'
+    | '/crop-doctor'
+    | '/crop-health'
+    | '/dashboard'
+    | '/farm'
+    | '/history'
+    | '/irrigation'
+    | '/notifications'
+    | '/profile'
+    | '/soil-health'
+    | '/weather'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/_app'
+    | '/login'
+    | '/register'
+    | '/_app/ai-advisor'
+    | '/_app/alerts'
+    | '/_app/crop-doctor'
+    | '/_app/crop-health'
+    | '/_app/dashboard'
+    | '/_app/farm'
+    | '/_app/history'
+    | '/_app/irrigation'
+    | '/_app/notifications'
+    | '/_app/profile'
+    | '/_app/soil-health'
+    | '/_app/weather'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
+  AppRoute: typeof AppRouteWithChildren
+  LoginRoute: typeof LoginRoute
+  RegisterRoute: typeof RegisterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +243,159 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app': {
+      id: '/_app'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/ai-advisor': {
+      id: '/_app/ai-advisor'
+      path: '/ai-advisor'
+      fullPath: '/ai-advisor'
+      preLoaderRoute: typeof AppAiAdvisorRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/alerts': {
+      id: '/_app/alerts'
+      path: '/alerts'
+      fullPath: '/alerts'
+      preLoaderRoute: typeof AppAlertsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/crop-doctor': {
+      id: '/_app/crop-doctor'
+      path: '/crop-doctor'
+      fullPath: '/crop-doctor'
+      preLoaderRoute: typeof AppCropDoctorRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/crop-health': {
+      id: '/_app/crop-health'
+      path: '/crop-health'
+      fullPath: '/crop-health'
+      preLoaderRoute: typeof AppCropHealthRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/dashboard': {
+      id: '/_app/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/farm': {
+      id: '/_app/farm'
+      path: '/farm'
+      fullPath: '/farm'
+      preLoaderRoute: typeof AppFarmRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/history': {
+      id: '/_app/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof AppHistoryRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/irrigation': {
+      id: '/_app/irrigation'
+      path: '/irrigation'
+      fullPath: '/irrigation'
+      preLoaderRoute: typeof AppIrrigationRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/notifications': {
+      id: '/_app/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof AppNotificationsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/profile': {
+      id: '/_app/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/soil-health': {
+      id: '/_app/soil-health'
+      path: '/soil-health'
+      fullPath: '/soil-health'
+      preLoaderRoute: typeof AppSoilHealthRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/weather': {
+      id: '/_app/weather'
+      path: '/weather'
+      fullPath: '/weather'
+      preLoaderRoute: typeof AppWeatherRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppAiAdvisorRoute: typeof AppAiAdvisorRoute
+  AppAlertsRoute: typeof AppAlertsRoute
+  AppCropDoctorRoute: typeof AppCropDoctorRoute
+  AppCropHealthRoute: typeof AppCropHealthRoute
+  AppDashboardRoute: typeof AppDashboardRoute
+  AppFarmRoute: typeof AppFarmRoute
+  AppHistoryRoute: typeof AppHistoryRoute
+  AppIrrigationRoute: typeof AppIrrigationRoute
+  AppNotificationsRoute: typeof AppNotificationsRoute
+  AppProfileRoute: typeof AppProfileRoute
+  AppSoilHealthRoute: typeof AppSoilHealthRoute
+  AppWeatherRoute: typeof AppWeatherRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppAiAdvisorRoute: AppAiAdvisorRoute,
+  AppAlertsRoute: AppAlertsRoute,
+  AppCropDoctorRoute: AppCropDoctorRoute,
+  AppCropHealthRoute: AppCropHealthRoute,
+  AppDashboardRoute: AppDashboardRoute,
+  AppFarmRoute: AppFarmRoute,
+  AppHistoryRoute: AppHistoryRoute,
+  AppIrrigationRoute: AppIrrigationRoute,
+  AppNotificationsRoute: AppNotificationsRoute,
+  AppProfileRoute: AppProfileRoute,
+  AppSoilHealthRoute: AppSoilHealthRoute,
+  AppWeatherRoute: AppWeatherRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
+  AppRoute: AppRouteWithChildren,
+  LoginRoute: LoginRoute,
+  RegisterRoute: RegisterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
